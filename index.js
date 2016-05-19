@@ -4,7 +4,7 @@ var session = require('express-session');
 var mongoose = require("mongoose");
 var passport = require('passport');
 
-var config = require('./config');
+// var config = require('./config');
 var userCtrl = require('./controllers/userCtrl.js');
 var chatroomCtrl = require('./controllers/chatroomCtrl.js');
 // var passportJs = require('./passport.js');
@@ -26,7 +26,7 @@ var app = express();
 
 
 app.use(session({
-  secret: config.SESSION_SECRET,
+  secret: config.SESSION_SECRET || process.env.SESSION_SECRET,
   saveUninitialized: false,
   resave: false
 }));
@@ -113,8 +113,8 @@ passport.deserializeUser(function(_id, done){
    return res.status(200).send('logged out');
  });
 
- var mongoURI = config.MONGO_URI;
- var port = config.PORT; ///////////////////////////
+ var mongoURI = process.env.MONGO_URI;
+ var port = process.env.PORT || 4000; ///////////////////////////
 
 mongoose.connect('mongodb://localhost:27017/skypeClone');
 mongoose.connection.once('open', function(){
@@ -122,6 +122,6 @@ mongoose.connection.once('open', function(){
 });
 
 
-app.listen(4000, function(){
+app.listen(port, function(){
     console.log("listening on port 4000");
 });
