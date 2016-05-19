@@ -113,10 +113,10 @@ passport.deserializeUser(function(_id, done){
    return res.status(200).send('logged out');
  });
 
- var mongoURI = process.env.MONGO_URI;
+ var mongoURI = process.env.MONGO_URI || "mongodb://localhost:27017/skypeClone";
  var port = process.env.PORT || 4000; ///////////////////////////
 
-mongoose.connect('mongodb://localhost:27017/skypeClone');
+mongoose.connect(mongoURI);
 mongoose.connection.once('open', function(){
     console.log('Connected to mongodb \n');
 });
