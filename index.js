@@ -6,10 +6,12 @@ var passport = require('passport');
 
 var config = require('./config');
 var userCtrl = require('./controllers/userCtrl.js');
+var chatroomCtrl = require('./controllers/chatroomCtrl.js');
 // var passportJs = require('./passport.js');
 var local = require('passport-local');
 
 var User = require('./models/userSchema.js');
+var Chatroom = require('./models/chatRoomSchema.js');
 
 //policy
 var isAuthed = function(req, res, next) {
@@ -32,7 +34,8 @@ app.use(passport.initialize());
 app.use(passport.session());  ///////
 app.use(bodyParser.json());  /////
 
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+'/public')); //how to serve up front-end files from the server
+
 passport.use(new local.Strategy({
   usernameField: 'email',
   passwordField: 'password',
@@ -56,6 +59,9 @@ passport.use(new local.Strategy({
   });
 });
 }));
+
+
+
 //users
 app.get('/api/user', userCtrl.Read);
 app.get('/api/user/:id', userCtrl.ReadId); //for login atm
@@ -63,7 +69,22 @@ app.post('/api/user', userCtrl.Create);
 app.put('/api/user', userCtrl.Update);//took out /:id
 app.delete('/api/user', userCtrl.Delete);
 app.get('/api/current/user', userCtrl.getCurrentUser);
-//authentication / redirect
+// app.get('api/user/friends', userCtrl.getFriends);
+app.put('/api/user/friend', userCtrl.addFriend);
+//authentication / redirect0-
+////CHATROOM
+app.get('/api/messages/:id', chatroomCtrl.Read);
+app.post('/api/message/:id', chatroomCtrl.Create);
+app.post('/api/chatroom', chatroomCtrl.CreateRoom);
+app.put('/api/chatroom/add', chatroomCtrl.addToChat);
+app.put('/api/chatroom/msg', chatroomCtrl.addMsg);
+app.get('/api/chatroom/join/:id', chatroomCtrl.getChatRooms);
+app.get('/api/chatroom/pastchats', chatroomCtrl.chatUserIn);
+////AUTHENTICATION
+
+
+
+
 app.post('/login',
 function(req, res, next){
   console.log(req.body);

@@ -13,9 +13,15 @@ module.exports = {
         });
     },
     getCurrentUser: function(req, res, next){
-      res.send(req.user);
+      User.findOne({"_id":req.user._id}).populate("friends").exec(function(err, response) {
+          if (err) {
+              res.status(500).json(err);
+          } else {
+              res.status(200).json(response);
+          }
+      });
     },
-    
+//(req.user.populate("friends"))
     Read: function(req, res, next) {
         User.find(req.query).exec(function(err, response) {
             if (err) {
@@ -57,6 +63,28 @@ module.exports = {
             response[0].remove();
         });
     },
+    // getFriends: function(req, res, next){
+    //   User.findById(req.user._id).populate({path:"friends", select: "username"})
+    //   .exec(function(err, response){
+    //     if (err) {
+    //         res.status(500).json(err);
+    //     } else {
+    //
+    //         res.status(200).json(response);
+    //     }
+    //   });
+    // },
+    addFriend: function(req, res, next){
+      console.log(req.body);
+      User.findByIdAndUpdate(req.user._id, {$push:{"friends":req.body._id}}, function(err, response){
+        if (err) {
+            res.status(500).json(err);
+        } else {
+            res.status(200).json(response);
+        }
+      });
+    }
+
 
     // register: function(req, res, next){
     //   User.create(req.body, function(err, result){
