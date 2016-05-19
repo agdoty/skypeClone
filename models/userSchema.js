@@ -23,7 +23,11 @@ var User = new mongoose.Schema({
             unique: true
         },
         trim: true
-    }
+    },
+    friends: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref:"User"
+    }]
     // status : {type: String, index : true},
     // visits : Number,
 });

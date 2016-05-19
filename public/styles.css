@@ -1,3 +1,63 @@
-html, body = {
-  background-color: #05aecc;
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+html {
+  background-color: #53ddc8;
+}
+/*HOMEPAGE*/
+#header-wrap{
+  position: fixed;
+  height: 5vh;
+  top:0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(70, 70, 69, 0.79);
+  margin-left: -8px;
+
+}
+#container{
+  margin-top: 5vh;
+}
+ /*.button{
+   height: 3.5vh;
+ background-color: rgba(0, 0, 0, 0.6);
+ border: rgba(0, 0, 0, 0.6);
+ font-family: 'Poiret One', cursive;
+ font-size: 190%;
+ color: white;
+ border-radius: 50px;
+/*float: left;*/
+ /*margin-top: 10%;*/
+ position: fixed;
+  /*bottom: 0;*/
+  width: 20%;
+ }*/
+
+/*END HOMEPAGE*/
+.inputArea{
+  width: 50%;
+  height: 50vh;
+  background-color: #9dcbd0
+}
+.enter-thought{
+  width: 20%;
+}
+.scroll{
+  background-color: white;
+  width: 40%;
+  border-radius: 7px;
+}
+.user-thought{
+  border-radius: 7px;
+}
+.chatbox{
+  width: 20%;
+  margin-left:20%;
+  margin-top: 10%;
+}
+#add-friend{
+  margin-left: 5%;
+}
+#box-around-sent-msg{
+  background-color: white;
+  width: 201%;
+  height: 20vh;
 }
