@@ -26,7 +26,7 @@ var app = express();
 
 
 app.use(session({
-  secret: config.SESSION_SECRET || process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || "hfdkjsl;ajsdk;lakjsadf",
   saveUninitialized: false,
   resave: false
 }));
