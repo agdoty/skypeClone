@@ -1,0 +1,91 @@
+<body>
+<div>
+<style media="screen">
+html{
+  background-color: purple;
+}
+  body
+    {
+      max-width: 50%;
+      margin: 2em auto;
+      font-size: 20px;
+    }
+
+    h1
+    {
+      text-align: center;
+    }
+
+    .buttons-wrapper
+    {
+      text-align: center;
+    }
+
+    .hidden
+    {
+      display: none;
+    }
+
+    #video
+    {
+      display: block;
+      width: 100%;
+    }
+
+    .button-demo
+    {
+      padding: 0.5em;
+      display: inline-block;
+      margin: 1em auto;
+    }
+</style>
+
+        <!-- Create ROOM and get FRIENDS TO ADD -->
+    <div class="newRoom">
+        <h3>Enter Chat-Room Name</h3>
+        <input ng-model="roomName.name" placeholder="Room Name"></input>
+        <button class="button" id="newRoom-btn" ng-click="newRoom(roomName)">Create</button>
+        <ul>{{roomNew.name}}</ul>
+        <!-- GET FRIENDS TO ADD TO CHAT -->
+        <button ng-click="getUsers()">get users</button>
+        <div ng-repeat="friend in user.friends">{{friend.username}}
+            <button ng-click="addToChat(friend._id, roomNew._id)">Add To Chat</button>
+        </div>
+    </div>
+<!-- V -->
+<!-- I -->
+<!-- D -->
+<video id="video" autoplay="autoplay" controls="true"></video>
+    <div class="buttons-wrapper">
+      <button id="button-play-gum" class="button-demo" href="#">Play demo</button>
+      <button id="button-stop-gum" class="button-demo" href="#">Stop demo</button>
+    </div>
+    <span id="gum-unsupported" class="hidden">API not supported</span>
+    <span id="gum-partially-supported" class="hidden">API partially supported (video only)</span>
+    <button type="button" name="button" ng-click="hasGetUserMedia()">test</button>
+
+
+<!-- E -->
+<!-- O -->
+<!--  -->
+        <!-- ENTIRE CHATBOX -->
+    <div class='chatbox' ng-model="chatbox">
+        <div>
+            <div id="box-around-sent-msg">
+                <div id="append-text" ng-repeat="message in messages">{{message.text}} : {{message.user.username}}</div>
+            </div>
+            <textarea ng-model='newMsg' class="user-thought" placeholder="Start Chatting.." style='height:7em; width:200%;'></textarea>
+        <!-- <div id="char-count">500</div> -->
+            <button class="button" id="thought-submit" ng-click="addMsg(newMsg, roomNew._id)">Send</button>
+        </div>
+        <!-- GET PAST CHATS -->
+    </div>
+    <button class="button" ng-click="chatUserIn()">Get Past Chats</button>
+    <div ng-repeat="chat in allowedChats">{{chat.name}}
+        <button ng-click="getChatRooms(chat._id)">join</button>
+    </div>
+    {{chatObj}}
+
+</div>
+
+</body>

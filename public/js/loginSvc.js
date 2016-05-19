@@ -34,4 +34,21 @@ this.getCurrentUser = function(){
     return response;
   });
 };
+this.getUsers = function(){
+  return $http({
+    method:"GET",
+    url:'/api/user'
+  }).then(function(response){
+    return response.data;
+  });
+};
+this.addFriend = function(user){
+  return $http({
+    method:"PUT",
+    url:"/api/user/friend",
+    data: user
+  }).then(function(response){
+    return response.data;
+  });
+};
 });
