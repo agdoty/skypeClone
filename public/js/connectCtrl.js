@@ -6,7 +6,6 @@ angular.module('skypeClone').controller('connectCtrl', function($scope, $interva
             $scope.messages = response.messages;
             });
           };
-
           $scope.postMessage = function(message){
             connectSvc.postMessage(message).then(function(response){
               $scope.messageNew = response;

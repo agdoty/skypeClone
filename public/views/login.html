@@ -1,6 +1,17 @@
 <body>
-  <h1>Log In</h1>
-  <input id="email" ng-model="currentUser.email" placeholder="Enter Your Email"> <br>
-  <input type="password" id="password" ng-model="currentUser.password" placeholder="Enter Your Password"><br>
-  <button id="login" ng-click="login(currentUser)">Login</button>
+  <div id="header-wrap">
+    <div id="header">
+        <button class="button" id="help" ui-sref='help'>Help</button>
+        <button class="button" id="about" ui-sref='about'>About</button>
+        <button class="button" id="home" ui-sref='homepage'>Home</button>
+    </div>
+  </div>
+  <div class="login-input">
+  <h1 id="loginphrase">Log In</h1>
+
+    <input class="loginform" id="email" ng-model="currentUser.email" placeholder="Enter Your Email" style="font-family:'Raleway', sans-serif; border-radius: 8px; border-color: rgba(0,0,0,0); height: 4vh;"> <br>
+    <input class="loginform" type="password" id="password" ng-model="currentUser.password" placeholder="Enter Your Password" style="font-family:'Raleway', sans-serif;border-radius: 8px; border-color: rgba(0,0,0,0); height: 4vh;"><br>
+
+</div>
+<button id="loginBtn" ng-click="login(currentUser)">Submit</button>
 </body>

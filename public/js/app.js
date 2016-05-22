@@ -13,7 +13,8 @@ angular.module('skypeClone', ["ui.router"])
             })
             .state('about', {
                 url: "/about",
-                templateUrl: './views/about.html'
+                templateUrl: './views/about.html',
+                controller:"aboutCtrl"
             })
             .state('login', {
                 url: '/login',

@@ -1,3 +1,4 @@
+
 <body>
 <div>
 <style media="screen">
@@ -44,13 +45,15 @@ html{
     <div class="newRoom">
         <h3>Enter Chat-Room Name</h3>
         <input ng-model="roomName.name" placeholder="Room Name"></input>
-        <button class="button" id="newRoom-btn" ng-click="newRoom(roomName)">Create</button>
-        <ul>{{roomNew.name}}</ul>
+        <button class="button" id="newRoom-btn" ng-click="newRoom(roomName)">Create</button><br><br>
+
         <!-- GET FRIENDS TO ADD TO CHAT -->
         <button ng-click="getUsers()">get users</button>
+
         <div ng-repeat="friend in user.friends">{{friend.username}}
             <button ng-click="addToChat(friend._id, roomNew._id)">Add To Chat</button>
         </div>
+        <ul id="roomName">{{roomNew.name}}</ul>
     </div>
 <!-- V -->
 <!-- I -->
@@ -62,7 +65,7 @@ html{
     </div>
     <span id="gum-unsupported" class="hidden">API not supported</span>
     <span id="gum-partially-supported" class="hidden">API partially supported (video only)</span>
-    <button type="button" name="button" ng-click="hasGetUserMedia()">test</button>
+    <!-- <button type="button" name="button" ng-click="hasGetUserMedia()">test</button> -->
 
 
 <!-- E -->
@@ -71,18 +74,19 @@ html{
         <!-- ENTIRE CHATBOX -->
     <div class='chatbox' ng-model="chatbox">
         <div>
-            <div id="box-around-sent-msg">
-                <div id="append-text" ng-repeat="message in messages">{{message.text}} : {{message.user.username}}</div>
+            <div id="box-around-sent-msg" style="border-radius: 5px; color: black;">
+                <div id="append-text" style="font-family: 'Raleway', sans-serif; color: black;" ng-repeat="message in messages">{{message.text}} : {{message.user.username}}</div>
             </div>
-            <textarea ng-model='newMsg' class="user-thought" placeholder="Start Chatting.." style='height:7em; width:200%;'></textarea>
+            <textarea ng-model='newMsg' class="user-thought" style="font-family: 'Raleway', sans-serif;" placeholder="Start Chatting.." style='height:7em; width:200%;'></textarea>
         <!-- <div id="char-count">500</div> -->
-            <button class="button" id="thought-submit" ng-click="addMsg(newMsg, roomNew._id)">Send</button>
+            <button class="button" id="thought-submit" ng-click="addMsg(newMsg, roomNew._id)">Send</button> <br><br>
         </div>
         <!-- GET PAST CHATS -->
     </div>
-    <button class="button" ng-click="chatUserIn()">Get Past Chats</button>
-    <div ng-repeat="chat in allowedChats">{{chat.name}}
-        <button ng-click="getChatRooms(chat._id)">join</button>
+    <br><br>
+    <button class="button" id="pastchat" ng-click="chatUserIn()" style="font-family: 'Raleway', sans-serif;">Get Past Chats</button><br>
+    <div id="getchats" style="font-family: 'Raleway', sans-serif;" ng-repeat="chat in allowedChats">{{chat.name}}
+        <button class="connectBtn" style="font-family: 'Raleway', sans-serif;" ng-click="getChatRooms(chat._id)">+</button>
     </div>
     {{chatObj}}
 

@@ -1,9 +1,29 @@
 <body>
-  <h3>Common Questions</h3>
-<div class="questions" ng-repeat="question in questions">
-  <ul>{{question}}</ul>
-</div><br>
-<h4>Live-Support<br><p>(111)-111-111</p></h4>
-<h4>Disclaimers<br>you may die</h4>
-<h4>Terms and Agreements<br>no matter what you will not sue</h4>
+  <div id="header-wrap">
+    <div id="header">
+        <button class="button" id="help" ui-sref='help'>Help</button>
+        <button class="button" id="about" ui-sref='about'>About</button>
+        <button class="button" id="home" ui-sref='homepage'>Home</button>
+    </div>
+  </div>
+  <div class="help">
+    <div class= "middleSection">
+      <h3 id="commQs">Common Questions</h3>
+      <div class="questions" ng-repeat="question in questions">
+        <ul>{{question}}</ul>
+      </div><br>
+      <h4 id="lvSp" >Live-Support<br></h4>
+        <div ng-repeat= "support in livesupport">
+          <ul>{{support}}<ul>
+        </div>
+      <h4 id="disclaimers">Disclaimers<br></h4>
+        <div ng-repeat="disclaim in disclaimers">
+          <ul>{{disclaim}}</ul>
+        </div>
+      <h4 id="tAndA">Terms and Agreements<br></h4>
+        <div ng-repeat="ts in tAndAs">
+          <ul>{{ts}}</ul>
+        </div>
+    </div>
+</div>
 </body>
