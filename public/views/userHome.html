@@ -1,11 +1,14 @@
 <body>
-
+  <div id="header-wrap">
+    <div id="header">
+        <button class="button" id="logout" ng-click="logout()">Log Out</button>
+    </div>
+  </div>
   <div id="main">
-    <h1>Hello, {{username}}!</h1>
-    <button class="button" ng-click="logout()">Log Out</button>
-    <button ui-sref="connect">Connect</button>
-    <button >Dashboard</button>
-    <button ng-click="getUsers()">Find Friends</button>
+    <h1 id="greeting">Hello, {{username}}!</h1>
+
+    <button class="button" ui-sref="connect">Connect</button>
+    <button class="button" ng-click="getUsers()">Find Friends</button>
     <div ng-repeat="friend in allUsers">{{friend.username}}<button id="add-friend" ng-click="addFriend(friend)">Add Friend</button></div>
   </div>
 

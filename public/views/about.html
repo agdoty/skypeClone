@@ -1,4 +1,18 @@
 <body>
-  <h1>About Us</h1>
-  <h4>Lorem ipsum dolor sit amet, elit wisi et feugiat duis lectus, libero sapien a mauris ut. Magnis dolor leo id, tincidunt sed gravida malesuada nam, mauris dolor porttitor dictum eget, magna nisl rhoncus praesent. Eros a sollicitudin, non eleifend duis arcu, etiam sollicitudin sapien. Turpis dolor euismod diam amet quis ac, sagittis penatibus fusce, felis turpis nonummy vestibulum, volutpat in turpis. Fusce cursus. Enim mi, porttitor leo lacinia proin magna, ac duis semper, blandit non id lobortis. Eu pellentesque eleifend quam. Nulla in laoreet, dolor at ornare turpis nam tempor molestie, a feugiat. Ut rhoncus aliquam nullam maiores aptent, tristique egestas fermentum aliquam urna, diam mauris id sodales nulla nulla, est mattis arcu donec eu congue. Diam justo cum cupidatat, etiam augue sodales ullamcorper.</h4>
+    <div id="header-wrap">
+        <div id="header">
+            <button class="button" id="help" ui-sref='help'>Help</button>
+            <button class="button" id="about" ui-sref='about'>About</button>
+            <button class="button" id="home" ui-sref='homepage'>Home</button>
+        </div>
+    </div>
+    <div class="help">
+        <div class="middleSection">
+            <h1 id="aboutphrase">About Us</h1>
+            <div ng-repeat="about in abouts track by $index">
+                <ul>{{about}}</ul>
+            </div>
+        </div>
+    </div>
+
 </body>
