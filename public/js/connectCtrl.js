@@ -56,6 +56,19 @@ angular.module('skypeClone').controller('connectCtrl', function($scope, $interva
 
             });
           };
+//SKYLINK AND VIDEO SHARING!! WORKING!!
+
+          
+
+
+
+
+
+
+
+
+
+
 
 
 //VIDEO CHAT
