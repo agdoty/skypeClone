@@ -65,7 +65,7 @@ angular.module('skypeClone').controller('connectCtrl', function($scope, $interva
             vid.autoplay = true;
             vid.muted = true; // Added to avoid feedback when testing locally
             vid.id = peerId;
-            document.body.prependChild(vid);
+            document.body.appendChild(vid);
           });
 
           skylink.on('incomingStream', function(peerId, stream, isSelf) {
