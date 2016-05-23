@@ -56,7 +56,7 @@ angular.module('skypeClone').controller('connectCtrl', function($scope, $interva
 
             });
           };
-
+//SKYLINK AND VIDEO SHARING!! WORKING!!
           var skylink = new Skylink();
 
           skylink.on('peerJoined', function(peerId, peerInfo, isSelf) {
@@ -65,7 +65,7 @@ angular.module('skypeClone').controller('connectCtrl', function($scope, $interva
             vid.autoplay = true;
             vid.muted = true; // Added to avoid feedback when testing locally
             vid.id = peerId;
-            document.body.appendChild(vid);
+            document.body.prependChild(vid);
           });
 
           skylink.on('incomingStream', function(peerId, stream, isSelf) {
