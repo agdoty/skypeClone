@@ -1,6 +1,6 @@
 
 <body>
-<div>
+<div data-ng-controller="connectCtrl">
 <style media="screen">
 html{
   background-color: purple;
@@ -55,13 +55,7 @@ html{
         </div>
         <ul id="roomName">{{roomNew.name}}</ul>
     </div>
-<!-- N -->
-<!-- E -->
-<!-- W --> 
- <video id="myvideo" style="transform: rotateY(-180deg);" autoplay muted controls="true"></video>
-<!-- V -->
-<!-- I -->
-<!-- D -->
+
 
 <!-- V -->
 <!-- I -->
@@ -97,5 +91,14 @@ html{
     {{chatObj}}
 
 </div>
+<!-- N -->
+<!-- E -->
+<!-- W -->
+<div data-ng-controller="videoCtrl">
+ <video id="myvideo"  style="transform: rotateY(-180deg);" autoplay muted controls="true" ></video>
+</div>
+<!-- V -->
+<!-- I -->
+<!-- D -->
 
 </body>

@@ -46,7 +46,7 @@ angular.module('skypeClone', ["ui.router"])
             .state('connect', {
               url:'/connect',
               templateUrl:'./views/connect.html',
-              controller: 'connectCtrl'
+              controller: ['connectCtrl', 'videoCtrl']
             });
         $urlRouterProvider.otherwise('/homepage');
     });
