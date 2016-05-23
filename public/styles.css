@@ -231,12 +231,14 @@ p{
 #main{
   margin-top: 7vh;
   font-family: 'Raleway', sans-serif;
+  margin-left: 0;
+  /*position: absolute;*/
 
 }
 #greeting{
   font-family: 'Raleway', sans-serif;
-
 }
+
 /************************/
 /*CONNECT*/
 .newRoom{
@@ -268,6 +270,6 @@ p{
   /*height: 4vh;*/
 }
 #roomName{
-  margin-left: -5%;
+  margin-left: -3%;
   font-size: 7vh;
 }
