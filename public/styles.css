@@ -143,6 +143,7 @@ margin-top: -50px;
     height: 20vh;
     margin-left: 20%;
     margin-top: -35%;
+    border-radius: 10px;
 }
 /***********************/
 /**//*CREATE A USER*//**/
@@ -275,7 +276,7 @@ p{
 }
 #thought-submit{
   width: 45%;
-  margin-left: 177%;
+  margin-left: 226%;
 }
 #pastchat{
   width:10%;
