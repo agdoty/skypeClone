@@ -93,6 +93,9 @@ $scope.toggle = function(){
 $scope.togglePast = function(){
   $scope.past = !$scope.past;
 }
+$scope.toggleChat =function(){
+  $scope.chat = !$scope.chat;
+}
 
 
 });
