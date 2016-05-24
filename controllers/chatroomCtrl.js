@@ -91,6 +91,8 @@ module.exports = {
         res.status(200).json(response);
       }
     });
-  },
-
+  }
+  // chatDelete: function(req, res, next) {
+  //   Chatroom.findById()
+  // }
 };

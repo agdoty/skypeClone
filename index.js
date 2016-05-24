@@ -80,6 +80,7 @@ app.put('/api/chatroom/add', chatroomCtrl.addToChat);
 app.put('/api/chatroom/msg', chatroomCtrl.addMsg);
 app.get('/api/chatroom/join/:id', chatroomCtrl.getChatRooms);
 app.get('/api/chatroom/pastchats', chatroomCtrl.chatUserIn);
+// app.delete('/api/chatroom/pastchats', chatroomCtrl.chatDelete);
 ////AUTHENTICATION
 
 

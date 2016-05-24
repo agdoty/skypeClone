@@ -78,11 +78,21 @@ angular.module('skypeClone').controller('userHomeCtrl', function($scope, loginSv
         $scope.allUsers = response;
       });
     };
+
     $scope.addFriend = function(user){
       loginSvc.addFriend(user).then(function(response){
         $scope.addedFriend = response;
       });
     };
+
+//////////////////////JQUERY
+$scope.toggle = function(){
+      $scope.myVar = !$scope.myVar;
+    };
+
+$scope.togglePast = function(){
+  $scope.past = !$scope.past;
+}
 
 
 });

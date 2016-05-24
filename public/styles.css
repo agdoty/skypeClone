@@ -118,11 +118,31 @@ font-family: 'Raleway', sans-serif;
 }
 #add-friend {
     margin-left: 5%;
+    height: 5.5vh;
+    background-color:  rgb(206,184,179);
+    border: rgba(0, 0, 0, 0.6);
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    border-radius: 10px;
+    float: none;
+    width: 5%;
+    margin-top: 6vh;
+
+}
+#findFriendBtn{
+  margin-top: 2vh;
+}
+#friends{
+margin-top: -50px;
+  margin-left: 0;
+  text-shadow: 2px 2px 4px #000000;
 }
 #box-around-sent-msg {
-    background-color: white;
-    width: 201%;
+    background-color: rgba(0,0,0,.5);
+    width: 251%;
     height: 20vh;
+    margin-left: 20%;
+    margin-top: -35%;
 }
 /***********************/
 /**//*CREATE A USER*//**/
@@ -225,6 +245,11 @@ p{
 }
 /************************/
 /*USERHOME*/
+
+
+
+
+
 #logout{
   float: right;
 }
@@ -243,19 +268,23 @@ p{
 /*CONNECT*/
 .newRoom{
   font-family: 'Raleway', sans-serif;
+}
+#newRoom-btn{
+  float:left;
 
 }
 #thought-submit{
   width: 45%;
-  margin-left: 150%;
+  margin-left: 177%;
 }
 #pastchat{
-  width: 45%;
+  width:10%;
   float: none;
 }
 .user-thought{
-  width: 200%;
+  width: 250%;
   height: 15vh;
+  margin-left: 20%;
 }
 #getchats{
   margin-top: 2vh;
@@ -270,6 +299,9 @@ p{
   /*height: 4vh;*/
 }
 #roomName{
-  margin-left: -3%;
+  margin-left: 20%;
   font-size: 7vh;
+}
+.foundFriends{
+  margin-top: 14vh;
 }
