@@ -10,7 +10,7 @@ skylink.on('peerJoined', function(peerId, peerInfo, isSelf) {
   vid.autoplay = true;
   vid.muted = true; // Added to avoid feedback when testing locally
   vid.id = peerId;
-  document.body.footer.appendChild(vid);
+  document.body.appendChild(vid);
 });
 
 skylink.on('incomingStream', function(peerId, stream, isSelf) {

@@ -247,10 +247,7 @@ p{
 /************************/
 /*USERHOME*/
 
-footer {
-  display: inline=block;
-}
-footer video{
+video{
   width: 48%;
 }
 .round-button {
