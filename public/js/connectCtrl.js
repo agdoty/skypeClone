@@ -2,39 +2,39 @@ angular.module('skypeClone').controller('connectCtrl', function($scope, $interva
 
 //SKYLINK AND VIDEO SHARING!! WORKING!!
 
-var skylink = new Skylink();
+var skylink = new Skylink(); //enables us to subscribe events in the controller
 
-skylink.on('peerJoined', function(peerId, peerInfo, isSelf) {
+skylink.on('peerJoined', function(peerId, peerInfo, isSelf) { //informs us a peer has joined
   if(isSelf) return; // We already have a video element for our video and don't need to create a new one.
-  var vid = document.createElement('video');
-  vid.autoplay = true;
+  var vid = document.createElement('video'); //creates a new vid element for new user
+  vid.autoplay = true; //autoplay enables the video to start right away
   vid.muted = true; // Added to avoid feedback when testing locally
-  vid.id = peerId;
-  document.body.appendChild(vid);
+  vid.id = peerId; //the user that joins gives us their peerId
+  document.body.appendChild(vid);//sends the new video to the bottom of the body on the DOM
 });
 
-skylink.on('incomingStream', function(peerId, stream, isSelf) {
-  if(isSelf) return;
-  var vid = document.getElementById(peerId);
-  attachMediaStream(vid, stream);
+skylink.on('incomingStream', function(peerId, stream, isSelf) { //fired after peerjoined when receiving vid/aud streams
+  if(isSelf) return; //if the peer is us, return our own id
+  var vid = document.getElementById(peerId);//else get the id of the incoming stream
+  attachMediaStream(vid, stream); //attaches a media stream to a vid/aud element
 });
-skylink.on('peerLeft', function(peerId, peerInfo, isSelf) {
-  var vid = document.getElementById(peerId);
-  document.body.removeChild(vid);
-});
-
-skylink.on('mediaAccessSuccess', function(stream) {
-  var vid = document.getElementById('myvideo');
-  attachMediaStream(vid, stream);
+skylink.on('peerLeft', function(peerId, peerInfo, isSelf) {//fired when a peer leaves the room
+  var vid = document.getElementById(peerId);//gets the id of the peer that's left
+  document.body.removeChild(vid);//removes video element by the id of the peer
 });
 
-skylink.init({
-  apiKey: '13c2f3f9-73c3-42a4-b13c-3da36e3bd1f2',
-  defaultRoom: 'Chat'
+skylink.on('mediaAccessSuccess', function(stream) { //User must authorize browser to have access to local vid/aud
+  var vid = document.getElementById('myvideo');//gets their local video
+  attachMediaStream(vid, stream);//attaches publice media stream to that peers vid/aud to send it back
+});
+
+skylink.init({ //initialize and joinRoom, establishes signaling connection with our servers
+  apiKey: '13c2f3f9-73c3-42a4-b13c-3da36e3bd1f2', //the api key we've been given
+  defaultRoom: 'Chat' //sets default room to whatever you name it
 }, function() {
-  skylink.joinRoom({
-    audio: true,
-    video: true
+  skylink.joinRoom({ //tells our servers to establish vid/aud streams
+    audio: true, //enables aud
+    video: true //enables vid
   });
 });
 
