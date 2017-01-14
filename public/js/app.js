@@ -9,12 +9,12 @@ angular.module('skypeClone', ["ui.router"])
             .state('help', {
                 url: '/help',
                 templateUrl: './views/help.html',
-                controller: 'helpCtrl'
+                controller: 'mainCtrl'
             })
             .state('about', {
                 url: "/about",
                 templateUrl: './views/about.html',
-                controller:"aboutCtrl"
+                controller:"mainCtrl"
             })
             .state('login', {
                 url: '/login',
@@ -47,6 +47,26 @@ angular.module('skypeClone', ["ui.router"])
               url:'/connect',
               templateUrl:'./views/connect.html',
               controller: 'connectCtrl'
-            });
+            })
+            .state('business', {
+              url: '/business',
+              templateUrl:'./views/business.html',
+              controller: 'mainCtrl'
+            })
+            .state('myaccount', {
+              url: '/myaccount',
+              templateUrl:'./views/myaccount.html',
+              controller: 'mainCtrl'
+            })
+            .state('rates', {
+              url: '/rates',
+              templateUrl:'./views/rates.html',
+              controller: 'mainCtrl'
+            })
+            .state('reviews', {
+              url: '/reviews',
+              templateUrl:'./views/reviews.html',
+              controller: 'mainCtrl'
+            })
         $urlRouterProvider.otherwise('/homepage');
     });

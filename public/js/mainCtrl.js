@@ -85,7 +85,7 @@ $('.circle').click(function() {
 
 
         $("#fb").css({ //upper right
-               "left":"-314px",
+               "left":"-313px",
                "top":"-5px",
                "z-index":"20",
                "border-radius":"0px",

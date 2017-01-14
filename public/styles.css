@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://fonts.googleapis.com/css?family=Raleway:300);
-@import url("https://fonts.googleapis.com/css?family=Lato:300");
+@import url("https://fonts.googleapis.com/css?family=Lato:300, 900");
 
 body{
   margin: 0;
@@ -8,7 +8,9 @@ body{
 .center-the-txt{
   visibility: hidden;
 }
-
+p{
+  font-family: 'Lato', sans-serif !important;
+}
 @media (max-width: 376px) {
   .sky-logo{
     background-image: url(./images/peachy-pink-block.png);
@@ -19,14 +21,14 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
   }
-.center-the-txt{
-  height: 31px;
-  font-size: 20px;
-  font-family: 'Raleway', sans-serif;
-  margin: 0;
-  padding: 13px;
-  /*visibility: visible !important;*/
-}
+  .center-the-txt{
+    height: 31px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 13px;
+    /*visibility: visible !important;*/
+  }
   #close{
     visibility: hidden;
     margin: 0;
@@ -56,15 +58,15 @@ body{
   .surrounding-bars{
     margin-top: 11px !important;
   }
-.ham-menu-container{
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  /*border-bottom: 2px groove white;*/
-  visibility: hidden;
-  width: 100%;
-  height: 56.5px;
-  background-color: rgb(206,184,179);
-  font-size: 20px;
-}
+  .ham-menu-container{
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    /*border-bottom: 2px groove white;*/
+    visibility: hidden;
+    width: 100%;
+    height: 56.5px;
+    background-color: rgb(206,184,179);
+    font-size: 20px;
+  }
   .circle{
     width: 44px;
         height: 44px;
@@ -100,27 +102,24 @@ body{
     height: 100vh;
   }
 
-  a {
-  width: 45px; height: 45px;
-  border-radius: 50%;
-  background: rgb(206,184,179);
-  text-align: center;
-  line-height: 1.5;
-  color: #fff;
-  text-decoration: none;
-  position: absolute;
-  font-size: 4rem;
-  text-align: center;
-  left: 0px;
-  top: 0px;
-  transition: .4s;
-}
-a{
-  z-index: -1;
-}
-
-
-
+    a {
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    background: rgb(206,184,179);
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    font-size: 4rem;
+    text-align: center;
+    left: 0px;
+    top: 0px;
+    transition: .4s;
+  }
+  a{
+    z-index: -1;
+  }
   #background-setter-homepage{
     /*background-color: rgb(206,204,194) !important;*/
     background-image: url('./images/wheat.jpg') !important;
@@ -182,12 +181,50 @@ a{
     margin: 0 !important;
     width: 100% !important;
     margin-right: 0 !important;
-}
-#container {
-  font-family: 'Lato', sans-serif !important;
-    margin-top: 7vh !important;
-    text-align: center !important;
-}
+  }
+  #container {
+    font-family: 'Lato', sans-serif !important;
+      margin-top: 7vh !important;
+      text-align: center !important;
+  }
+/*****************************************************************/
+/*                           ABOUT PAGE                          */
+/*****************************************************************/
+  #background-setter-about{
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 0 !important;
+    background-color: #E3DFDB;
+  }
+  .image-container{
+    height: 300px;
+  }
+  #cloud{
+     background-size: contain;
+     height: 300px;
+     width: 100%;
+  }
+  .page-container{
+     height: 92vh;
+     margin-top: -5vh
+  }
+  .header-text-abt{
+    font-size: 32px;
+    width: 43%;
+    margin-left: 28.5%;
+    font-weight: 900;
+    margin-top: 10vh;
+    color: rgb(34, 34, 34);
+  }
+  .info-txt-container{
+    height: 100vh;
+    width: 100%;
+  }
+  .info-txt{
+    color: rgb(34, 34, 34);
+  }
+
+
 }
 
 
@@ -228,6 +265,7 @@ button:hover {
 }
 #header{
   margin-top: .3%;
+  height: 53px;
 }
 .middleOfPage {
 font-family: 'Raleway', sans-serif;
