@@ -10,10 +10,10 @@ angular.module('skypeClone').controller('loginCtrl', function($scope, loginSvc, 
       // $scope.loggedIn = response;
       // console.log(response);
       // $scope.user = response.username;
-    // if(response.id){
+    if(response.id){
     // if(true){
       $state.go('userHome');
-    // }
+    }
     });
   };
 
