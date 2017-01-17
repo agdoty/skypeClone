@@ -1,6 +1,5 @@
 angular.module('skypeClone').controller('mainCtrl', function($scope, service, $state) {
 
-    console.log('hit0');
     //WORKING
     // $scope.getUser = function(user) {
     //     service.getUser(user).then(function(response) {
