@@ -30,18 +30,18 @@ angular.module('skypeClone', ["ui.router"])
                 url: '/userHome',
                 templateUrl: './views/userHome.html',
                 controller: 'userHomeCtrl',
-                resolve: {
-                    user: function(loginSvc, $state) {
-                        return loginSvc.getCurrentUser().then(function(response) {
-                            console.log(response);
-                            if (!response.data) {
-                                $state.go('login');
-                            } else {
-                                return response.data;
-                            }
-                        });
-                    }
-                }
+                // resolve: {
+                //     user: function(loginSvc, $state) {
+                //         return loginSvc.getCurrentUser().then(function(response) {
+                //             console.log(response);
+                //             if (!response.data) {
+                //                 $state.go('login');
+                //             } else {
+                //                 return response.data;
+                //             }
+                //         });
+                //     }
+                // }
             })
             .state('connect', {
               url:'/connect',

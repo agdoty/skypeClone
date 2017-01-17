@@ -1,29 +1,68 @@
-<body>
+<div id="background-setter-about">
   <div id="header-wrap">
     <div id="header">
+
         <button class="button" id="help" ui-sref='help'>Help</button>
         <button class="button" id="about" ui-sref='about'>About</button>
-        <button class="button" id="home" ui-sref='homepage'>Home</button>
+        <button class="button" id="login" ui-sref='login'>Login</button>
+        <div class="sky-logo"></div>
+        <nav class="circle" id="ham-menu">
+          <div class="surrounding-bars">
+            <div class="top bar"></div>
+            <div class="bar" id="center"></div>
+            <div class="bottom bar"></div>
+          </div>
+          <a href="#" class="radiate" id="fb">
+            <div id="close"><p class="center-the-txt">Close menu</p></div>
+            <div class="ham-menu-container"><p class="center-the-txt" ui-sref="about">About Us</p></div>
+            <div class="ham-menu-container"><p class="center-the-txt" ui-sref="business">Business</p></div>
+            <div class="ham-menu-container"><p class="center-the-txt" ui-sref="help">Help</p></div>
+            <div class="ham-menu-container"><p class="center-the-txt" ui-sref="myaccount">My Account</p></div>
+            <div class="ham-menu-container"><p class="center-the-txt" ui-sref="rates">Rates</p></div>
+            <div class="ham-menu-container"><p class="center-the-txt" ui-sref="reviews">Reviews</p></div>
+            <div class="ham-menu-container" id="join-us" ui-sref="login"><p class="center-the-txt">Join Us</p></div>
+
+
+          </a>
+        </nav>
+
     </div>
   </div>
-  <div class="help">
-    <div class= "middleSection">
-      <h3 id="commQs">Common Questions</h3>
-      <div class="questions" ng-repeat="question in questions">
-        <ul>{{question}}</ul>
-      </div><br>
-      <h4 id="lvSp" >Live-Support<br></h4>
-        <div ng-repeat= "support in livesupport">
-          <ul>{{support}}<ul>
-        </div>
-      <h4 id="disclaimers">Disclaimers<br></h4>
-        <div ng-repeat="disclaim in disclaimers">
-          <ul>{{disclaim}}</ul>
-        </div>
-      <h4 id="tAndA">Terms and Agreements<br></h4>
-        <div ng-repeat="ts in tAndAs">
-          <ul>{{ts}}</ul>
-        </div>
+     <br><br>
+    <div class="page-container">
+      <!-- <div class="image-container">
+        <img src="./images/rain.jpg" alt="./images/cloud" id="cloud">
+        <p class="header-text-abt">About Us</p>
+      </div> -->
+      <p class="header-text-abt">HELP</p>
+
+      <p class="info-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Donec luctus enim vitae condimentum facilisis. Sed elementum malesuada mi,
+         ut bibendum risus. Pellentesque in gravida dolor, quis tincidunt nisl. Duis
+         sed lobortis dolor, a rutrum dui. Vestibulum consequat auctor vulputate.
+         Pellentesque pellentesque risus nibh, sit amet dignissim nibh tempor nec.
+         Nam luctus sapien scelerisque orci rutrum, sit amet dignissim est commodo.
+         Nullam lacus elit, semper nec nisi a, pharetra sollicitudin mauris.
+
+Aliquam vestibulum velit justo. Vestibulum maximus sollicitudin sapien condimentum
+blandit. Aenean quis condimentum eros. In hendrerit, mauris nec vulputate ultricies,
+quam augue mattis nisi, ut eleifend ante nibh vel quam. Ut feugiat turpis ipsum, vitae
+aliquet metus dictum et. Vivamus vitae lobortis sem, non molestie lorem. Aenean vel metus nibh.
+ Quisque et quam dui. Donec mattis tincidunt dolor.
+<br><br>
+Sed maximus scelerisque tortor sit amet finibus. Class aptent taciti sociosqu ad
+litora torquent per conubia nostra, per inceptos himenaeos. Nullam porttitor ligula
+orci, quis viverra tortor sagittis nec. Suspendisse venenatis risus tortor, a molestie
+turpis eleifend nec. Nullam condimentum augue velit, ut suscipit mi venenatis eu.
+ Vivamus finibus dui massa, eu fermentum mauris aliquam sed. Suspendisse urna risus,
+ placerat eget ultricies id, malesuada nec est. Integer porta purus ut rutrum condimentum.
+<br><br>
+ Nam sem mi, viverra sit amet mauris et, vestibulum vehicula mauris. In sit amet purus viverra,
+  fringilla sapien et, tempus metus. Sed ut accumsan nibh. Suspendisse sodales, tortor
+  finibus scelerisque facilisis, quam odio hendrerit urna, eu viverra nibh ipsum in est.
+   Donec orci risus, pretium vitae magna at, consequat semper turpis. Pellentesque habitant
+    morbi tristique senectus et netus.</p>
+
+
     </div>
 </div>
-</body>

@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300");
 @import url("https://fonts.googleapis.com/css?family=Lato:300, 900");
 
 body{
@@ -12,6 +12,15 @@ p{
   font-family: 'Lato', sans-serif !important;
 }
 @media (max-width: 376px) {
+
+  #header-wrap{
+    position: fixed !important;
+    height: 53px !important;
+    top: 0 !important;
+    width: 100% !important;
+    z-index: 100 !important;
+    background-color: white !important;
+  }
   .sky-logo{
     background-image: url(./images/peachy-pink-block.png);
     width: 41px;
@@ -83,6 +92,7 @@ p{
         border-radius: 75px;
         position: relative;
         z-index: initial;
+        visibility: visible !important;
   }
   .bar{
     width: 30px !important;
@@ -188,10 +198,44 @@ p{
       text-align: center !important;
   }
 /*****************************************************************/
+/*                             SIGN IN                           */
+/*****************************************************************/
+
+#log-in{
+  font-size: 2.5em !important;
+  margin-left: 15% !important;
+  font-family: 'Lato', sans-serif !important;
+  width: 70% !important;
+  text-align: center !important;
+  line-height: 1.3333em !important;
+  margin-top: 90px !important;
+  font-weight: bold !important;
+}
+
+.loginform{
+  width: 60% !important;
+  margin-top: 5% !important;
+  margin-left: 0 !important;
+}
+
+#loginBtn{
+    margin: 4%;
+    border-style: solid !important;
+    border-color: white !important;
+    border-radius: 50px !important;
+    background-color: rgba(140, 135, 1, 0) !important;
+    font-size: 1em !important;
+    height: 50px !important;
+    width: 60% !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    margin-top: 12% !important;
+}
+/*****************************************************************/
 /*                           ABOUT PAGE                          */
 /*****************************************************************/
   #background-setter-about{
-    height: 100vh !important;
+    height: 137.5vh !important;
     width: 100% !important;
     margin: 0 !important;
     background-color: #E3DFDB;
@@ -213,7 +257,8 @@ p{
     width: 43%;
     margin-left: 28.5%;
     font-weight: 900;
-    margin-top: 10vh;
+    margin-top: 13vh;
+    text-align: center;
     color: rgb(34, 34, 34);
   }
   .info-txt-container{
@@ -222,10 +267,30 @@ p{
   }
   .info-txt{
     color: rgb(34, 34, 34);
+    margin: 0;
+    width: 75%;
+    text-align: justify;
+    margin-left: 10%;
+    background-color: white;
+    padding: 2%;
+    border: 3px double #CCCCCC;
+  }
+  #background-setter-myaccount{
+    height: 143.5vh !important;
+    width: 100% !important;
+    margin: 0 !important;
+    background-color: #E3DFDB;
   }
 
-
 }
+
+/************************************************************************/
+/*                             IPAD MEDIA QUERY                         */
+/************************************************************************/
+
+
+
+
 
 
 /*HOMEPAGE*/
@@ -257,7 +322,7 @@ button:hover {
 }
 #header-wrap {
     position: fixed;
-    height: 52px;
+    height: 9.5vh;
     top: 0;
     width: 100%;
     z-index: 100;
@@ -265,15 +330,15 @@ button:hover {
 }
 #header{
   margin-top: .3%;
-  height: 53px;
+  height: 100px ;
 }
 .middleOfPage {
 font-family: 'Raleway', sans-serif;
 
 }
+
 #container {
     margin-top: 7vh;
-
 }
 #text-and-button{
   margin-top: 35vh;
@@ -296,18 +361,34 @@ font-family: 'Raleway', sans-serif;
     margin-left: .5%;
     width: 10%;
 }
+.sign-in-button{
+  height: 10vh;
+  border: rgba(0, 0, 0, 0.6);
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5vh;
+  color: white;
+  border-radius: 10px;
+  float: left;
+  margin-left: 35%;
+  width: 30%;
+  margin-top: 2%;
+}
 #login {
     float: right;
     margin-right: .5%;
     background-color: rgb(206,184,179);
 }
+.circle{
+  visibility: hidden;
+}
 #getStarted{
-  margin-left: 40%;
-  height:13vh;
-  width: 20%;
+  margin-left: 35%;
+  height:10vh;
+  width: 30%;
+  margin-right: 40%;
   font-size: 4vh;
   background-color: rgb(206,184,179);
-  margin-top: 0%;
+  margin-top: 2%;
 }
 
 /*END HOMEPAGE*/

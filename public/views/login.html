@@ -1,17 +1,88 @@
-<body>
-  <div id="header-wrap">
-    <div id="header">
-        <button class="button" id="help" ui-sref='help'>Help</button>
-        <button class="button" id="about" ui-sref='about'>About</button>
-        <button class="button" id="home" ui-sref='homepage'>Home</button>
+<div id="background-setter-homepage">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="background-setter-homepage">
+    <div id="header-wrap">
+      <div id="header">
+
+          <button class="button" id="help" ui-sref='help'>Help</button>
+          <button class="button" id="about" ui-sref='about'>About</button>
+          <button class="button" id="login" ui-sref='login'>Login</button>
+          <div class="sky-logo"></div>
+          <nav class="circle" id="ham-menu">
+            <div class="surrounding-bars">
+              <div class="top bar"></div>
+              <div class="bar" id="center"></div>
+              <div class="bottom bar"></div>
+            </div>
+            <a href="#" class="radiate" id="fb">
+              <div id="close"><p class="center-the-txt">Close menu</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="homepage">Home</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="about">About Us</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="business">Business</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="help">Help</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="myaccount">My Account</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="rates">Rates</p></div>
+              <div class="ham-menu-container"><p class="center-the-txt" ui-sref="reviews">Reviews</p></div>
+              <div class="ham-menu-container" id="join-us" ui-sref="login"><p class="center-the-txt">Join Us</p></div>
+
+
+            </a>
+          </nav>
+
+      </div>
     </div>
+       <br><br>
+      <div class="middleOfPage" id="container">
+        <div id="text-and-button">
+        <h2 id="log-in">Sign In<br><h2>
+          <div class="cool">
+            <input class="loginform" id="email" ng-model="currentUser.email" placeholder="Enter Your Email" style="font-family:'Raleway', sans-serif; border-radius: 8px; border-color: rgba(0,0,0,0); height: 4vh;">
+            <input class="loginform" type="password" id="password" ng-model="currentUser.password" placeholder="Enter Your Password" style="font-family:'Raleway', sans-serif;border-radius: 8px; border-color: rgba(0,0,0,0); height: 4vh;">
+
+          </div>
+          <button id="loginBtn" ng-click="login(currentUser)">Submit</button>
+
+        </div>
+      </div>
   </div>
-  <div class="login-input">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="login-input">
   <h1 id="loginphrase">Log In</h1>
 
     <input class="loginform" id="email" ng-model="currentUser.email" placeholder="Enter Your Email" style="font-family:'Raleway', sans-serif; border-radius: 8px; border-color: rgba(0,0,0,0); height: 4vh;"> <br>
     <input class="loginform" type="password" id="password" ng-model="currentUser.password" placeholder="Enter Your Password" style="font-family:'Raleway', sans-serif;border-radius: 8px; border-color: rgba(0,0,0,0); height: 4vh;"><br>
 
 </div>
-<button id="loginBtn" ng-click="login(currentUser)">Submit</button>
-</body>
+<button id="loginBtn" ng-click="login(currentUser)">Submit</button> -->
+</div >

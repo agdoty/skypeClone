@@ -89,7 +89,7 @@ $('.circle').click(function() {
                "z-index":"20",
                "border-radius":"0px",
                "width":"375px",
-               "height": "calc(100vh + 1px)",
+               "height": "calc(100vh + 5px)",
                "-webkit-transition": ".5s",
                "-moz-transition":".5s",
                "-o-transition":" .5s",
@@ -110,9 +110,7 @@ $('.circle').click(function() {
   }
   $(this).data("clicks", !clicks);
 });
-$(".ham-menu-container").click(function(){
-  $state.go('homepage');
-})
+
 
 });
 
