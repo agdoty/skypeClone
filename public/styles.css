@@ -329,8 +329,17 @@ button:hover {
     background-color: white;
 }
 #header{
-  margin-top: .3%;
-  height: 100px ;
+  height: 9.5vh;
+}
+.sky-logo{
+  background-image: url(./images/peachy-pink-block.png);
+  width: 6vh;
+  height: 5vh;
+  margin-top: 2.25vh;
+  margin-left: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
 }
 .middleOfPage {
 font-family: 'Raleway', sans-serif;
@@ -506,16 +515,24 @@ margin-top: -50px;
   float: right;
 }
 /************************/
-/*Help*/
-.help{
-  font-family: 'Raleway', sans-serif;
-  margin-top: 7vh;
+#help{
+  float: right;
+  margin-right: 1%;
+  width:15%;
+}
+#about{
+  float: right;
+  width:15%;
+  margin-right: 10px;
 }
 .middleSection{
   background-color: rgba(206, 184,179, .6);
   height: 160vh;
   margin-left: 20%;
   margin-right: 20%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #commQs{
   margin-left: 30%;
