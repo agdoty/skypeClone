@@ -1,6 +1,6 @@
 angular.module('skypeClone').controller('userHomeCtrl', function($scope, loginSvc, connectSvc, user, $state) {
 
-
+//add in user to dependenciess
 
   $scope.interval;
 
