@@ -5,15 +5,15 @@ angular.module('skypeClone').controller('loginCtrl', function($scope, loginSvc, 
 
     loginSvc.login(currentUser)
     .then(function(response){
-      console.log(response);
-      // $scope.getUser(response.id);
-      // $scope.loggedIn = response;
+      console.log("login credentials true");
+      $scope.getUser(response.id);
+      $scope.loggedIn = response;
       // console.log(response);
-      // $scope.user = response.username;
-    // if(response.id){
-    // // if(true){
-    //   $state.go('userHome');
-    // }
+      $scope.user = response.username;
+    if(response.id){
+    // if(true){
+      $state.go('userHome');
+    }
     });
   };
 
